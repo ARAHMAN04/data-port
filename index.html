@@ -5,48 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdelrahman Ayman - Data Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Abdelrahman Ayman</h1>
-    <h2>Aspiring Data Engineer</h2>
+    <div class="container">
+      <h1>Abdelrahman Ayman</h1>
+      <h2>Aspiring Data Engineer</h2>
+      <p class="tagline">Transforming data into insights and solutions</p>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a student at the Faculty of Engineering, Alexandria University,
-      enrolled in the Digital Egypt Pioneers Initiative (DEPI) for Data Engineering.
-      I’m passionate about building data pipelines, managing databases, and learning cloud technologies.
-    </p>
-  </section>
+  <nav>
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python for Data Processing</li>
-      <li>SQL & Database Fundamentals</li>
-      <li>Linux & Command Line Basics</li>
-      <li>ETL & Data Warehousing Concepts</li>
-    </ul>
-  </section>
+  <main class="container">
+    <section id="about">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <p>
+        I'm a student at the Faculty of Engineering, Alexandria University,
+        enrolled in the Digital Egypt Pioneers Initiative (DEPI) for Data Engineering.
+        I'm passionate about building data pipelines, managing databases, and learning cloud technologies.
+      </p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Coming soon as I progress through DEPI.</p>
-  </section>
+    <section id="skills">
+      <h2><i class="fas fa-code"></i> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <i class="fab fa-python"></i>
+          <div>
+            <h3>Python for Data Processing</h3>
+            <p>Data manipulation, analysis, and visualization</p>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <i class="fas fa-database"></i>
+          <div>
+            <h3>SQL & Database Fundamentals</h3>
+            <p>Designing, querying, and optimizing databases</p>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <i class="fab fa-linux"></i>
+          <div>
+            <h3>Linux & Command Line Basics</h3>
+            <p>Working with Linux environments and CLI tools</p>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <i class="fas fa-sync-alt"></i>
+          <div>
+            <h3>ETL & Data Warehousing Concepts</h3>
+            <p>Designing and implementing ETL processes</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: your.email@example.com</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
-      <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-    </ul>
-  </section>
+    <section id="projects">
+      <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+      <div class="project-card">
+        <h3><i class="fas fa-chart-line"></i> Data Analysis Project</h3>
+        <p>Analyzing datasets using Python and creating interactive dashboards</p>
+      </div>
+      
+      <div class="project-card">
+        <h3><i class="fas fa-ethernet"></i> Data Pipeline</h3>
+        <p>Building ETL pipelines for data extraction, transformation and loading</p>
+      </div>
+      
+      <div class="project-card">
+        <h3><i class="fas fa-cloud"></i> Cloud Solution</h3>
+        <p>Deploying data applications on cloud platforms</p>
+      </div>
+      
+      <p class="notice">More projects will be added soon as I progress through DEPI.</p>
+    </section>
+
+    <section id="contact">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <ul>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <span>Email: your.email@example.com</span>
+        </li>
+        <li>
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></span>
+        </li>
+        <li>
+          <i class="fab fa-github"></i>
+          <span>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></span>
+        </li>
+      </ul>
+      <a href="mailto:your.email@example.com" class="btn-contact"><i class="fas fa-paper-plane"></i> Send Email</a>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Abdelrahman Ayman. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Abdelrahman Ayman. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
