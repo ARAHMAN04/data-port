@@ -1,65 +1,42 @@
-/* Reset some defaults */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f0f4f8;
-  color: #333;
-  padding: 20px;
+  margin: 20px;
+  background-color: #121212; /* dark background */
+  color: #e0e0e0; /* light text for readability */
 }
 
-/* Header */
 header {
   text-align: center;
   margin-bottom: 40px;
 }
 
-header h1 {
-  font-size: 2.5em;
-  color: #1a73e8;
+h1 {
+  font-size: 2.4em;
+  margin: 0;
 }
 
-header h2 {
-  font-size: 1.4em;
-  color: #555;
-  margin: 10px 0;
+h2 {
+  color: #bbbbbb;
+  margin: 5px 0 20px 0;
   font-weight: normal;
 }
 
-header p {
-  color: #666;
-  font-size: 1em;
-}
-
-/* Sections */
 section {
-  background-color: #fff;
+  margin-bottom: 30px;
   padding: 25px;
-  margin-bottom: 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  background-color: #1e1e1e; /* card background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-section h2 {
-  color: #1a73e8;
-  margin-bottom: 15px;
-}
-
-/* Skills list */
 ul {
   list-style-type: square;
   margin-left: 20px;
-  color: #444;
 }
 
-/* Links */
 a {
-  color: #1a73e8;
+  color: #4fc3f7;
   text-decoration: none;
 }
 
@@ -67,10 +44,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
 footer {
   text-align: center;
   margin-top: 30px;
-  color: #777;
+  color: #aaaaaa;
   font-size: 0.9em;
 }
