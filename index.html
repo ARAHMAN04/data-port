@@ -1,105 +1,1018 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>محفظتي - عبدالرحمن</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Abdelrahman - Data Engineer Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #3b82f6;
+      --accent: #60a5fa;
+      --light: #dbeafe;
+      --dark-bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-light: #f8fafc;
+      --text-dark: #cbd5e1;
+      --gray: #94a3b8;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--dark-bg);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--text-light);
+      padding: 100px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      flex: 0 0 auto;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid var(--light);
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05);
+    }
+
+    .header-right {
+      text-align: left;
+    }
+
+    .header-right h1 {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+      position: relative;
+      animation: fadeInDown 1s ease;
+    }
+
+    .header-right h2 {
+      font-size: 1.8rem;
+      color: var(--light);
+      margin-bottom: 15px;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      max-width: 500px;
+      color: var(--text-light);
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+
+    /* Navigation */
+    #navbar {
+      background-color: rgba(30, 41, 59, 0.95);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+
+    #navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+      background: var(--light);
+      padding: 8px 15px;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-light);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--primary);
+      font-size: 2.5rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    section h2 i {
+      margin-right: 15px;
+      color: var(--secondary);
+    }
+
+    section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: var(--gray);
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .highlight {
+      display: flex;
+      align-items: center;
+      background-color: var(--light);
+      padding: 10px 20px;
+      border-radius: 50px;
+      color: var(--primary);
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .highlight:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .highlight i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .about-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-placeholder {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .image-placeholder:hover {
+      transform: scale(1.05);
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card:hover::before {
+      width: 8px;
+    }
+
+    .project-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 15px;
+      color: var(--text-light);
+    }
+
+    .project-card p {
+      color: var(--gray);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .project-tags span {
+      background-color: var(--light);
+      color: var(--primary);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .project-link:hover {
+      color: var(--secondary);
+    }
+
+    .project-link i {
+      margin-left: 8px;
+      transition: var(--transition);
+    }
+
+    .project-link:hover i {
+      transform: translateX(5px);
+    }
+
+    /* Contact Section */
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: var(--gray);
+    }
+
+    .contact-info ul {
+      list-style: none;
+    }
+
+    .contact-info li {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info li i {
+      margin-right: 15px;
+      font-size: 1.5rem;
+      color: var(--primary);
+      min-width: 30px;
+    }
+
+    .contact-info a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-info a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+
+    .contact-form {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-form h3 {
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid var(--gray);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--text-light);
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    button[type="submit"] {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    button[type="submit"]:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, var(--primary-dark), var(--dark-bg));
+      color: var(--text-light);
+      padding: 60px 0 20px;
+      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .footer-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: var(--text-light);
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      background-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #backToTop.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #backToTop:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+      
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .contact-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 80px 0 60px;
+      }
+      
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .header-right {
+        text-align: center;
+      }
+      
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      header h2 {
+        font-size: 1.5rem;
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--card-bg);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+      
+      section {
+        padding: 60px 0;
+      }
+      
+      section h2 {
+        font-size: 2rem;
+      }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .footer-social {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .tagline {
+        font-size: 1rem;
+      }
+      
+      .about-highlights {
+        justify-content: center;
+      }
+      
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Header Section -->
   <header>
-    <div class="container">
+    <div class="container header-container">
       <div class="header-left">
-        <img src="profile.jpg" alt="عبدالرحمن" class="profile-photo">
+        <div class="image-placeholder">
+          <i class="fas fa-user"></i>
+        </div>
       </div>
       <div class="header-right">
-        <h1>عبدالرحمن</h1>
-        <h2>مهندس بيانات</h2>
-        <p class="tagline">متحمس لتحليل البيانات وبناء النماذج.</p>
+        <h1>Abdelrahman Ayman</h1>
+        <h2>Data Engineer</h2>
+        <p class="tagline">Passionate about data analysis and building models with Python, Pandas, and NumPy</p>
       </div>
     </div>
   </header>
 
+  <!-- Navigation -->
   <nav id="navbar">
     <div class="container">
-      <a href="#" class="nav-brand">محفظتي</a>
+      <a href="#" class="nav-brand">A.A</a>
       <div class="nav-links">
-        <a href="#about">من أنا</a>
-        <a href="#projects">المشاريع</a>
-        <a href="#contact">اتصل بي</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
       </div>
     </div>
   </nav>
 
-  <section id="about">
-    <div class="container">
-      <h2><i class="fas fa-user"></i> من أنا</h2>
+  <!-- Main Content -->
+  <main class="container">
+    <!-- About Section -->
+    <section id="about">
+      <h2><i class="fas fa-user"></i> About Me</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>أنا عبدالرحمن، مهندس بيانات متخصص في تحليل البيانات باستخدام Pandas و Numpy. أتمتع بخبرة في بناء النماذج وتحليل البيانات.</p>
+          <p>
+            I'm Abdelrahman, a data engineer specializing in data analysis using Pandas and NumPy. 
+            I have experience in building models and data analysis. I'm passionate about transforming 
+            raw data into meaningful insights and creating data-driven solutions.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <i class="fas fa-check"></i>
+              <span>Data Analysis</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-check"></i>
+              <span>Model Building</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-check"></i>
+              <span>Machine Learning</span>
+            </div>
+          </div>
         </div>
-        <div class="about-highlights">
-          <div class="highlight"><i class="fas fa-check"></i> تحليل البيانات</div>
-          <div class="highlight"><i class="fas fa-check"></i> بناء النماذج</div>
-          <div class="highlight"><i class="fas fa-check"></i> تعلم الآلة</div>
+        <div class="about-image">
+          <div class="image-placeholder">
+            <i class="fas fa-laptop-code"></i>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <div class="container">
-      <h2><i class="fas fa-briefcase"></i> المشاريع</h2>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2><i class="fas fa-briefcase"></i> Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <h3>مشروع Pandas</h3>
-          <p>تحليل بيانات باستخدام مكتبة Pandas.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/pandas" class="project-link">رابط المشروع <i class="fas fa-external-link-alt"></i></a>
+          <div class="project-icon"><i class="fas fa-table"></i></div>
+          <h3>Pandas Project</h3>
+          <p>Data analysis using the Pandas library for data manipulation and exploration.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Pandas</span><span>Data Analysis</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/pandas" target="_blank" class="project-link">
+            View Project <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
         <div class="project-card">
-          <h3>مشروع mini Folium</h3>
-          <p>تصوير البيانات الجغرافية باستخدام مكتبة Folium.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/mini%20Folium" class="project-link">رابط المشروع <i class="fas fa-external-link-alt"></i></a>
+          <div class="project-icon"><i class="fas fa-map"></i></div>
+          <h3>Mini Folium</h3>
+          <p>Geographic data visualization using the Folium library for interactive maps.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Folium</span><span>Visualization</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/mini%20Folium" target="_blank" class="project-link">
+            View Project <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
         <div class="project-card">
-          <h3>مشروع Pandas 3</h3>
-          <p>تحليل بيانات متقدمة باستخدام Pandas.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%203" class="project-link">رابط المشروع <i class="fas fa-external-link-alt"></i></a>
+          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Pandas 3</h3>
+          <p>Advanced data analysis using the latest features of Pandas library.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Pandas</span><span>Data Analysis</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%203" target="_blank" class="project-link">
+            View Project <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
         <div class="project-card">
-          <h3>مشروع Pandas 2</h3>
-          <p>تحليل بيانات باستخدام Pandas مع تقنيات إضافية.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%202" class="project-link">رابط المشروع <i class="fas fa-external-link-alt"></i></a>
+          <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Pandas 2</h3>
+          <p>Data analysis with Pandas using additional techniques and methodologies.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Pandas</span><span>Data Wrangling</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%202" target="_blank" class="project-link">
+            View Project <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
         <div class="project-card">
-          <h3>مشروع Numpy</h3>
-          <p>عمليات رياضية باستخدام مكتبة Numpy.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Numpy" class="project-link">رابط المشروع <i class="fas fa-external-link-alt"></i></a>
+          <div class="project-icon"><i class="fas fa-calculator"></i></div>
+          <h3>Numpy Project</h3>
+          <p>Mathematical operations and numerical computing using NumPy library.</p>
+          <div class="project-tags">
+            <span>Python</span><span>NumPy</span><span>Numerical Computing</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Numpy" target="_blank" class="project-link">
+            View Project <i class="fas fa-external-link-alt"></i>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2><i class="fas fa-envelope"></i> اتصل بي</h2>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2><i class="fas fa-envelope"></i> Contact Me</h2>
       <div class="contact-content">
         <div class="contact-info">
-          <p>يمكنك التواصل معي عبر:</p>
+          <p>Feel free to reach out for collaborations or just a friendly hello!</p>
           <ul>
-            <li><i class="fas fa-envelope"></i> <a href="mailto:rahman@example.com">rahman@example.com</a></li>
-            <li><i class="fas fa-phone"></i> +20 123 456 789</li>
-            <li><i class="fas fa-map-marker-alt"></i> الإسكندرية، مصر</li>
+            <li><i class="fas fa-envelope"></i> Email: <a href="mailto:arahmanayman04@gmail.com">arahmanayman04@gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank">Abdelrahman Hamed</a></li>
+            <li><i class="fas fa-phone"></i> Phone: <a href="tel:+201149100066">+20 114 910 0066</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> Location: Alexandria, Egypt</li>
           </ul>
         </div>
+        <div class="contact-form">
+          <h3>Send me a message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Abdelrahman Ayman</h3>
+          <p>Data Engineer & Analyst</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/ARAHMAN04" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:arahmanayman04@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Abdelrahman Ayman. All rights reserved.</p>
       </div>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 عبدالرحمن. جميع الحقوق محفوظة.</p>
   </footer>
 
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Wait for DOM to load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize navigation toggle
+      initNavToggle();
+      
+      // Initialize back to top button
+      initBackToTop();
+      
+      // Initialize smooth scrolling
+      initSmoothScrolling();
+      
+      // Initialize form handling
+      initForm();
+      
+      // Navbar background on scroll
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+          if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(30, 41, 59, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+          } else {
+            navbar.style.background = 'var(--card-bg)';
+            navbar.style.backdropFilter = 'none';
+          }
+        }
+      });
+    });
+
+    // Navigation toggle for mobile
+    function initNavToggle() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+        });
+      }
+    }
+
+    // Back to top button
+    function initBackToTop() {
+      const backToTopBtn = document.getElementById('backToTop');
+      
+      if (backToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+          } else {
+            backToTopBtn.classList.remove('show');
+          }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    }
+
+    // Smooth scrolling for navigation links
+    function initSmoothScrolling() {
+      const navLinks = document.querySelectorAll('a[href^="#"]');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            // Close mobile menu if open
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks && navLinks.classList.contains('active')) {
+              navLinks.classList.remove('active');
+            }
+            
+            // Scroll to target
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+
+    // Form handling
+    function initForm() {
+      const form = document.getElementById('contactForm');
+      
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Simple form validation
+          const inputs = this.querySelectorAll('input, textarea');
+          let isValid = true;
+          
+          inputs.forEach(input => {
+            if (!input.value.trim()) {
+              isValid = false;
+              input.style.borderColor = 'red';
+            } else {
+              input.style.borderColor = '';
+            }
+          });
+          
+          if (isValid) {
+            // Simulate form submission
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+          }
+        });
+      }
+    }
+  </script>
 </body>
 </html>
