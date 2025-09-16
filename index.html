@@ -9,14 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Header -->
+  <!-- Header Section -->
   <header>
     <div class="container header-container">
-      <div class="about-image">
-        <img src="https://raw.githubusercontent.com/ARAHMAN04/data-port/main/WhatsApp%20Image%202025-09-16%20at%202.21.16%20PM.jpeg" alt="Abdelrahman Ayman" class="profile-photo">
+      <div class="header-left">
+        <img src="WhatsApp Image 2025-09-16 at 2.21.16 PM.jpeg" alt="Abdelrahman Ayman" class="profile-photo">
       </div>
-      <div class="header-text">
+      <div class="header-right">
         <h1>Abdelrahman Ayman</h1>
         <h2>Aspiring Data Engineer</h2>
         <p class="tagline">Transforming data into insights and solutions</p>
@@ -34,9 +33,7 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="nav-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
+      <div class="nav-toggle"><i class="fas fa-bars"></i></div>
     </div>
   </nav>
 
@@ -45,13 +42,20 @@
     <!-- About Section -->
     <section id="about">
       <h2><i class="fas fa-user"></i> About Me</h2>
-      <p>
-        I'm a student at the Faculty of Engineering, Alexandria University, in the Computer & Communications Department. 
-        Passionate about Data Engineering, building pipelines, managing databases, and exploring machine learning.
-      </p>
-      <p>
-        Currently exploring projects in Python, SQL, Pandas, and interactive visualization.
-      </p>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a student at the Faculty of Engineering, Alexandria University, enrolled in the 
+            Digital Egypt Pioneers Initiative (DEPI) for Data Engineering. I'm passionate about 
+            building data pipelines, managing databases, and learning cloud technologies.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight"><i class="fas fa-graduation-cap"></i>Engineering Student</div>
+            <div class="highlight"><i class="fas fa-database"></i>Data Engineering</div>
+            <div class="highlight"><i class="fas fa-cloud"></i>Cloud Technologies</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
@@ -63,7 +67,7 @@
           <div class="skill-info">
             <h3>Python</h3>
             <p>Data processing & scripting</p>
-            <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
           </div>
         </div>
         <div class="skill-item">
@@ -71,7 +75,7 @@
           <div class="skill-info">
             <h3>SQL</h3>
             <p>Database design & queries</p>
-            <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
           </div>
         </div>
         <div class="skill-item">
@@ -79,7 +83,15 @@
           <div class="skill-info">
             <h3>Git / GitHub</h3>
             <p>Version control and collaboration</p>
-            <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+            <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon"><i class="fas fa-file-code"></i></div>
+          <div class="skill-info">
+            <h3>Python Libraries</h3>
+            <p>Pandas • NumPy • Matplotlib</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
           </div>
         </div>
       </div>
@@ -90,24 +102,43 @@
       <h2><i class="fas fa-project-diagram"></i> Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
+          <div class="project-icon"><i class="fas fa-table"></i></div>
           <h3>Pandas Project</h3>
-          <p>Exploring and analyzing data using Pandas library for data cleaning and analysis.</p>
+          <p>Exploring and analyzing data using Pandas.</p>
+          <div class="project-tags"><span>Python</span><span>Pandas</span><span>Data Analysis</span></div>
           <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/pandas" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
         </div>
+
         <div class="project-card">
+          <div class="project-icon"><i class="fas fa-map"></i></div>
           <h3>Mini Folium</h3>
-          <p>Interactive maps using Python Folium library with geographic data visualization.</p>
+          <p>Creating interactive maps with Folium library.</p>
+          <div class="project-tags"><span>Python</span><span>Folium</span><span>Visualization</span></div>
           <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/mini%20Folium" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
         </div>
+
         <div class="project-card">
-          <h3>Data Pipelines</h3>
-          <p>Building ETL pipelines for structured data analysis and storage.</p>
-          <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Pandas 3</h3>
+          <p>Advanced data analysis with Pandas version 3.</p>
+          <div class="project-tags"><span>Python</span><span>Pandas</span><span>Data Analysis</span></div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%203" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
         </div>
+
         <div class="project-card">
-          <h3>Dashboard Project</h3>
-          <p>Creating interactive dashboards for visualizing insights using Python and Plotly.</p>
-          <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Pandas 2</h3>
+          <p>Intermediate Pandas workflows and transformations.</p>
+          <div class="project-tags"><span>Python</span><span>Pandas</span><span>Data Wrangling</span></div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%202" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-calculator"></i></div>
+          <h3>Numpy</h3>
+          <p>Numerical operations and array manipulations using NumPy.</p>
+          <div class="project-tags"><span>Python</span><span>NumPy</span><span>Numerical Computing</span></div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Numpy" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </section>
@@ -115,11 +146,25 @@
     <!-- Contact Section -->
     <section id="contact">
       <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <p>Email: <a href="mailto:arahmanayman04@gmail.com">arahmanayman04@gmail.com</a></p>
-      <p>Phone: <a href="tel:01149100066">01149100066</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank">My Profile</a></p>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+          <ul>
+            <li><i class="fas fa-envelope"></i> arahmanayman04@gmail.com</li>
+            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank">LinkedIn Profile</a></li>
+            <li><i class="fab fa-github"></i> <a href="https://github.com/ARAHMAN04" target="_blank">GitHub Profile</a></li>
+            <li><i class="fas fa-phone"></i> 01149100066</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 Abdelrahman Ayman. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
