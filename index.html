@@ -3,58 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Data Engineering Portfolio</title>
+  <title>Abdelrahman Ayman - Data Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>🚀 My Data Engineering Portfolio</h1>
-    <p>Showcasing my projects hosted on GitHub</p>
+    <div class="container">
+      <h1>Abdelrahman Ayman</h1>
+      <h2>Aspiring Data Engineer</h2>
+      <p class="tagline">Transforming data into insights and solutions</p>
+    </div>
   </header>
 
-  <main class="grid">
-    <div class="card">
-      <i class="fa-solid fa-database icon"></i>
-      <h2>Data Analysis</h2>
-      <p>Exploring and cleaning datasets using Pandas & Numpy.</p>
-      <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Data%20analysis" target="_blank">View Project</a>
+  <nav>
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
 
-    <div class="card">
-      <i class="fa-solid fa-square-root-alt icon"></i>
-      <h2>Numpy Project</h2>
-      <p>Hands-on exercises with NumPy arrays and operations.</p>
-      <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Numpy" target="_blank">View Project</a>
-    </div>
+  <main class="container">
+    <!-- About Section -->
+    <section id="about">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <p>
+        I'm a student at the Faculty of Engineering, Alexandria University,
+        enrolled in the Digital Egypt Pioneers Initiative (DEPI) for Data Engineering.
+        I'm passionate about building data pipelines, managing databases, and learning cloud technologies.
+      </p>
+    </section>
 
-    <div class="card">
-      <i class="fa-solid fa-table icon"></i>
-      <h2>Pandas Project</h2>
-      <p>Data wrangling and analysis using Pandas library.</p>
-      <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/pandas" target="_blank">View Project</a>
-    </div>
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2><i class="fas fa-code"></i> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <i class="fab fa-python"></i>
+          <div>
+            <h3>Python for Data Processing</h3>
+            <p>Data manipulation, analysis, and visualization</p>
+          </div>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-database"></i>
+          <div>
+            <h3>SQL & Database Fundamentals</h3>
+            <p>Designing, querying, and optimizing databases</p>
+          </div>
+        </div>
+        <div class="skill-item">
+          <i class="fab fa-linux"></i>
+          <div>
+            <h3>Linux & Command Line Basics</h3>
+            <p>Working with Linux environments and CLI tools</p>
+          </div>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-sync-alt"></i>
+          <div>
+            <h3>ETL & Data Warehousing Concepts</h3>
+            <p>Designing and implementing ETL processes</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <i class="fa-solid fa-table-cells-large icon"></i>
-      <h2>Pandas 2</h2>
-      <p>Advanced data manipulation using Pandas.</p>
-      <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%202" target="_blank">View Project</a>
-    </div>
+    <!-- Services Section -->
+    <section id="services">
+      <h2><i class="fas fa-cogs"></i> Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-database"></i>
+          <h3>Database Design & Management</h3>
+          <p>Designing relational and NoSQL databases for efficient storage.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-project-diagram"></i>
+          <h3>ETL Pipeline Development</h3>
+          <p>Building pipelines to extract, transform, and load data for analytics.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <h3>Cloud Data Solutions</h3>
+          <p>Deploying data applications on AWS, Azure, or GCP for scalability.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Data Analysis & Reporting</h3>
+          <p>Processing and visualizing data to provide actionable insights.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <i class="fa-solid fa-diagram-project icon"></i>
-      <h2>Pandas 3</h2>
-      <p>Exploring datasets with Pandas and real-world analysis.</p>
-      <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%203" target="_blank">View Project</a>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3><i class="fas fa-database"></i> Data Cleaning Project</h3>
+          <p>Scripts for cleaning and preprocessing raw datasets.</p>
+          <a href="https://github.com/ARAHMAN04/data-port/tree/main/data-cleaning" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-code"></i> ETL Pipeline</h3>
+          <p>ETL workflow for extracting, transforming, and loading structured data.</p>
+          <a href="https://github.com/ARAHMAN04/data-port/tree/main/etl-pipeline" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-chart-bar"></i> Data Visualization</h3>
+          <p>Interactive dashboards for exploring and visualizing insights.</p>
+          <a href="https://github.com/ARAHMAN04/data-port/tree/main/data-visualization" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <i class="fa-solid fa-map-location-dot icon"></i>
-      <h2>Mini Folium</h2>
-      <p>Interactive maps visualization with Folium.</p>
-      <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/mini%20Folium" target="_blank">View Project</a>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <ul>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <span>Email: your.email@example.com</span>
+        </li>
+        <li>
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn:
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+          </span>
+        </li>
+        <li>
+          <i class="fab fa-github"></i>
+          <span>GitHub:
+            <a href="https://github.com/ARAHMAN04" target="_blank">github.com/ARAHMAN04</a>
+          </span>
+        </li>
+      </ul>
+    </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Abdelrahman Ayman. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
