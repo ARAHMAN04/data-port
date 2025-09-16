@@ -1,12 +1,12 @@
 :root {
-  --primary: #023e8a;
-  --secondary: #0077b6;
+  --primary: #0077b6;
+  --secondary: #023e8a;
   --accent: #00b4d8;
   --dark-bg: #03045e;
+  --card-bg: #041c32;
   --text-light: #f8f9fa;
   --text-dark: #ccc;
-  --card-bg: #041c32;
-  --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --shadow: 0 5px 15px rgba(0,0,0,0.2);
   --transition: all 0.3s ease;
 }
 
@@ -27,7 +27,7 @@ body {
 header {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 20px;
   padding: 40px 0;
 }
 
@@ -55,6 +55,33 @@ header {
   margin-top: 5px;
 }
 
+/* Navigation */
+#navbar {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
 /* Sections */
 section {
   padding: 60px 0;
@@ -69,8 +96,8 @@ section h2 {
 /* Skills */
 .skills-grid {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .skill-item {
@@ -78,18 +105,30 @@ section h2 {
   padding: 20px;
   border-radius: 10px;
   flex: 1 1 250px;
+  transition: var(--transition);
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
 }
 
 .skill-bar {
-  background-color: #333;
+  background-color: #222;
   height: 8px;
   border-radius: 4px;
   overflow: hidden;
+  margin-top: 5px;
 }
 
 .skill-progress {
   background-color: var(--accent);
   height: 100%;
+  width: 0;
+  animation: loadSkill 1.5s forwards;
+}
+
+@keyframes loadSkill {
+  to { width: var(--width, 80%); }
 }
 
 /* Projects */
@@ -104,6 +143,11 @@ section h2 {
   padding: 20px;
   border-radius: 10px;
   flex: 1 1 300px;
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
 }
 
 .project-link {
@@ -118,7 +162,6 @@ section h2 {
 /* Contact */
 a {
   color: var(--accent);
-  text-decoration: none;
 }
 
 a:hover {
@@ -126,14 +169,10 @@ a:hover {
 }
 
 /* Responsive */
-@media(max-width: 768px) {
+@media(max-width:768px){
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .header-text {
-    align-items: center;
   }
 }
