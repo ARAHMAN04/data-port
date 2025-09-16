@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- Header Section -->
   <header>
     <div class="container header-container">
@@ -26,7 +27,9 @@
   <!-- Navigation -->
   <nav id="navbar">
     <div class="container">
-      <div class="nav-brand">A.A</div>
+      <div class="nav-brand">
+        <span>A.A</span>
+      </div>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -44,18 +47,11 @@
     <!-- About Section -->
     <section id="about">
       <h2><i class="fas fa-user"></i> About Me</h2>
-      <div class="about-content">
-        <p>
-          I'm a student at the Faculty of Engineering, Alexandria University, enrolled in the 
-          Digital Egypt Pioneers Initiative (DEPI) for Data Engineering. I'm passionate about 
-          building data pipelines, managing databases, and learning cloud technologies.
-        </p>
-        <div class="about-highlights">
-          <div class="highlight"><i class="fas fa-graduation-cap"></i> Engineering Student</div>
-          <div class="highlight"><i class="fas fa-database"></i> Data Engineering</div>
-          <div class="highlight"><i class="fas fa-cloud"></i> Cloud Technologies</div>
-        </div>
-      </div>
+      <p>
+        I'm a student at the Faculty of Engineering, Alexandria University, enrolled in the 
+        Digital Egypt Pioneers Initiative (DEPI) for Data Engineering. I'm passionate about 
+        building data pipelines, managing databases, and learning cloud technologies.
+      </p>
     </section>
 
     <!-- Skills Section -->
@@ -67,7 +63,7 @@
           <div class="skill-info">
             <h3>Python</h3>
             <p>Data processing & scripting</p>
-            <div class="skill-bar"><div class="skill-progress" style="width:85%;"></div></div>
+            <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
           </div>
         </div>
         <div class="skill-item">
@@ -75,23 +71,15 @@
           <div class="skill-info">
             <h3>SQL</h3>
             <p>Database design & queries</p>
-            <div class="skill-bar"><div class="skill-progress" style="width:80%;"></div></div>
+            <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
           </div>
         </div>
         <div class="skill-item">
           <div class="skill-icon"><i class="fab fa-github"></i></div>
           <div class="skill-info">
             <h3>Git / GitHub</h3>
-            <p>Version control & collaboration</p>
-            <div class="skill-bar"><div class="skill-progress" style="width:75%;"></div></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-icon"><i class="fas fa-file-code"></i></div>
-          <div class="skill-info">
-            <h3>Python Libraries</h3>
-            <p>Pandas • NumPy • Matplotlib</p>
-            <div class="skill-bar"><div class="skill-progress" style="width:90%;"></div></div>
+            <p>Version control and collaboration</p>
+            <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
           </div>
         </div>
       </div>
@@ -102,19 +90,13 @@
       <h2><i class="fas fa-project-diagram"></i> Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-icon"><i class="fas fa-table"></i></div>
           <h3>Pandas Project</h3>
           <p>Exploring and analyzing data using Pandas.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Pandas</span><span>Data Analysis</span>
-          </div>
           <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/pandas" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="project-card">
-          <div class="project-icon"><i class="fas fa-map"></i></div>
           <h3>Mini Folium</h3>
           <p>Creating interactive maps with Folium library.</p>
-          <div class="project-tags"><span>Python</span><span>Folium</span><span>Visualization</span></div>
           <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/mini%20Folium" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
@@ -123,45 +105,11 @@
     <!-- Contact Section -->
     <section id="contact">
       <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <div class="contact-content">
-        <div class="contact-info">
-          <p>Feel free to reach out for collaborations or just a friendly hello!</p>
-          <ul>
-            <li><i class="fas fa-envelope"></i> arahmanayman04@gmail.com</li>
-            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank">LinkedIn</a></li>
-            <li><i class="fab fa-github"></i> <a href="https://github.com/ARAHMAN04" target="_blank">GitHub</a></li>
-            <li><i class="fas fa-phone"></i> +20 1149100066</li>
-          </ul>
-        </div>
-        <div class="contact-form">
-          <h3>Send me a message</h3>
-          <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-      </div>
+      <p>Email: arahmanayman04@gmail.com</p>
+      <p>Phone: 01149100066</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank">My Profile</a></p>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-container">
-      <div class="footer-info">
-        <h3>Abdelrahman Ayman</h3>
-        <p>Transforming data into insights and solutions</p>
-      </div>
-      <div class="footer-social">
-        <a href="https://github.com/ARAHMAN04" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:arahmanayman04@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Abdelrahman Ayman. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>
