@@ -5,36 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdelrahman Ayman - Data Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <div class="container">
       <h1>Abdelrahman Ayman</h1>
       <h2>Aspiring Data Engineer</h2>
       <p class="tagline">Transforming data into insights and solutions</p>
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </div>
   </header>
 
-  <nav>
+  <!-- Navigation -->
+  <nav id="navbar">
     <div class="container">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <div class="nav-brand">
+        <span>A.A</span>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
   </nav>
 
+  <!-- Main Content -->
   <main class="container">
     <!-- About Section -->
     <section id="about">
       <h2><i class="fas fa-user"></i> About Me</h2>
-      <p>
-        I'm a student at the Faculty of Engineering, Alexandria University, enrolled in the 
-        Digital Egypt Pioneers Initiative (DEPI) for Data Engineering. I'm passionate about 
-        building data pipelines, managing databases, and learning cloud technologies.
-      </p>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a student at the Faculty of Engineering, Alexandria University, enrolled in the 
+            Digital Egypt Pioneers Initiative (DEPI) for Data Engineering. I'm passionate about 
+            building data pipelines, managing databases, and learning cloud technologies.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Engineering Student</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-database"></i>
+              <span>Data Engineering</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-cloud"></i>
+              <span>Cloud Technologies</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="image-placeholder">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
@@ -42,31 +80,35 @@
       <h2><i class="fas fa-code"></i> Skills</h2>
       <div class="skills-grid">
         <div class="skill-item">
-          <i class="fab fa-python"></i>
-          <div>
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <div class="skill-info">
             <h3>Python</h3>
             <p>Data processing & scripting</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
           </div>
         </div>
         <div class="skill-item">
-          <i class="fas fa-database"></i>
-          <div>
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <div class="skill-info">
             <h3>SQL</h3>
             <p>Database design & queries</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
           </div>
         </div>
         <div class="skill-item">
-          <i class="fab fa-github"></i>
-          <div>
+          <div class="skill-icon"><i class="fab fa-github"></i></div>
+          <div class="skill-info">
             <h3>Git / GitHub</h3>
             <p>Version control and collaboration</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
           </div>
         </div>
         <div class="skill-item">
-          <i class="fas fa-file-code"></i>
-          <div>
+          <div class="skill-icon"><i class="fas fa-file-code"></i></div>
+          <div class="skill-info">
             <h3>Python Libraries</h3>
             <p>Pandas • NumPy • Matplotlib</p>
+            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
           </div>
         </div>
       </div>
@@ -75,36 +117,61 @@
     <!-- Projects Section -->
     <section id="projects">
       <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-table"></i>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-table"></i></div>
           <h3>Pandas Project</h3>
           <p>Exploring and analyzing data using Pandas.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/pandas" target="_blank">View Project</a>
+          <div class="project-tags">
+            <span>Python</span><span>Pandas</span><span>Data Analysis</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/pandas" target="_blank" class="project-link">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="service-card">
-          <i class="fas fa-map"></i>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-map"></i></div>
           <h3>Mini Folium</h3>
           <p>Creating interactive maps with Folium library.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/mini%20Folium" target="_blank">View Project</a>
+          <div class="project-tags">
+            <span>Python</span><span>Folium</span><span>Visualization</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/mini%20Folium" target="_blank" class="project-link">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="service-card">
-          <i class="fas fa-chart-line"></i>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
           <h3>Pandas 3</h3>
           <p>Advanced data analysis with Pandas version 3.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%203" target="_blank">View Project</a>
+          <div class="project-tags">
+            <span>Python</span><span>Pandas</span><span>Data Analysis</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%203" target="_blank" class="project-link">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="service-card">
-          <i class="fas fa-chart-bar"></i>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
           <h3>Pandas 2</h3>
           <p>Intermediate Pandas workflows and transformations.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%202" target="_blank">View Project</a>
+          <div class="project-tags">
+            <span>Python</span><span>Pandas</span><span>Data Wrangling</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Pandas%202" target="_blank" class="project-link">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="service-card">
-          <i class="fas fa-drafting-compass"></i>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-calculator"></i></div>
           <h3>Numpy</h3>
           <p>Numerical operations and array manipulations using NumPy.</p>
-          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Numpy" target="_blank">View Project</a>
+          <div class="project-tags">
+            <span>Python</span><span>NumPy</span><span>Numerical Computing</span>
+          </div>
+          <a href="https://github.com/ARAHMAN04/DataEngineering/tree/main/Numpy" target="_blank" class="project-link">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -112,37 +179,55 @@
     <!-- Contact Section -->
     <section id="contact">
       <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <ul>
-        <li>
-          <i class="fas fa-envelope"></i>
-          <span>Email: your.email@example.com</span>
-        </li>
-        <li>
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></span>
-        </li>
-        <li>
-          <i class="fab fa-github"></i>
-          <span>GitHub: <a href="https://github.com/ARAHMAN04" target="_blank">github.com/ARAHMAN04</a></span>
-        </li>
-        <li>
-          <i class="fas fa-phone"></i>
-          <span>Phone: +20 1149100066</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Thank You Section -->
-    <section id="thank-you">
-      <h2>🙏 Thank You</h2>
-      <p>Feel free to reach out anytime!</p>
+      <div class="contact-content">
+        <div class="contact-info">
+          <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+          <ul>
+            <li><i class="fas fa-envelope"></i> Email: <a href="mailto:arahmanayman04@gmail.com">arahmanayman04@gmail.com</a></li>
+            <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank">linkedin.com/in/abdelrahman-hamed-359954279/</a></li>
+            <li><i class="fas fa-phone"></i> Phone: <a href="tel:+201149100066">01149100066</a></li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <h3>Send me a message</h3>
+          <form>
+            <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+            <div class="form-group"><input type="email" placeholder="Your Email" required></div>
+            <div class="form-group"><textarea placeholder="Your Message" rows="4" required></textarea></div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Abdelrahman Ayman. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Abdelrahman Ayman</h3>
+          <p>Transforming data into insights and solutions</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/ARAHMAN04" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/abdelrahman-hamed-359954279/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:arahmanayman04@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Abdelrahman Ayman. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 </body>
 </html>
